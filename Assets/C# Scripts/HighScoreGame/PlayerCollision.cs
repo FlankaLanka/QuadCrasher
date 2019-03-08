@@ -10,8 +10,6 @@ public class PlayerCollision : MonoBehaviour
 
     //Used to set Bird Animation upon hitting player
     public Sprite BirdEnemyDeathSprite;
-    public Sprite EvolvedCar;
-
 
     void Start()
     {
@@ -40,7 +38,7 @@ public class PlayerCollision : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D TriggerObject)
     {
-        if(TriggerObject.gameObject.name == "EndIcon")
+        if(TriggerObject.gameObject.name == "EndIcon") //TEST ITEM
         {
             FindObjectOfType<GameManager>().EndGame();
         }

@@ -16,10 +16,10 @@ TagManager:
   - Player
   - Enemies
   - Background
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Platform
+  - Item
+  - Effect
   - 
   - 
   - 
@@ -38,18 +38,30 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1960058169
+    locked: 0
+  - name: Platform
+    uniqueID: 748465459
+    locked: 0
+  - name: WinTruck
+    uniqueID: 803951237
+    locked: 0
+  - name: Enemies
+    uniqueID: 2005107715
+    locked: 0
+  - name: Player
+    uniqueID: 782738415
+    locked: 0
+  - name: Item
+    uniqueID: 3781479137
+    locked: 0
+  - name: Effect
+    uniqueID: 3030643107
+    locked: 0
   - name: UI
     uniqueID: 2397530157
     locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Player
-    uniqueID: 782738415
-    locked: 0
-  - name: Enemies
-    uniqueID: 2005107715
-    locked: 0
-  - name: Background
-    uniqueID: 1960058169
     locked: 0

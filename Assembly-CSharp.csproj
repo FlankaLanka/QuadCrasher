@@ -64,11 +64,18 @@
     <Compile Include="Assets\C# Scripts\HighScoreGame\BackgroundScroll.cs" />
     <Compile Include="Assets\C# Scripts\HighScoreGame\CoinMovement.cs" />
     <Compile Include="Assets\C# Scripts\HighScoreGame\HappyBirdMovement.cs" />
-    <Compile Include="Assets\C# Scripts\HighScoreGame\InGameOptions.cs" />
     <Compile Include="Assets\C# Scripts\HighScoreGame\PlayerCollision.cs" />
     <Compile Include="Assets\C# Scripts\HighScoreGame\PlayerMovement.cs" />
     <Compile Include="Assets\C# Scripts\HighScoreGame\RocketMovement.cs" />
+    <Compile Include="Assets\C# Scripts\HighScoreGame\WeightMovement.cs" />
+    <Compile Include="Assets\C# Scripts\InGameOptions.cs" />
     <Compile Include="Assets\C# Scripts\MainMenu\MainMenu.cs" />
+    <Compile Include="Assets\C# Scripts\Platformer\Interactables\CoinInteract.cs" />
+    <Compile Include="Assets\C# Scripts\Platformer\Interactables\GroundInteract.cs" />
+    <Compile Include="Assets\C# Scripts\Platformer\Interactables\PlankInteract.cs" />
+    <Compile Include="Assets\C# Scripts\Platformer\Interactables\TruckInteract.cs" />
+    <Compile Include="Assets\C# Scripts\Platformer\PlayerControl\Player1Movement.cs" />
+    <Compile Include="Assets\C# Scripts\Platformer\PlayerControl\Player2Movement.cs" />
     <Compile Include="Assets\GameManager.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Frank Yang/Desktop/EC447/Unity Games/QuadCrasher/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
