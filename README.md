@@ -1,7 +1,7 @@
 # QuadCrasher
 
-Adventure Mode:
--Controls-
+Adventure Mode:\n
+-Controls\n
 	P1: Arrow Keys, Up is jump
 	P2: WASD, W is jump
 -Cooperate to collect all coins and then reach the disassembled truck to complete level
