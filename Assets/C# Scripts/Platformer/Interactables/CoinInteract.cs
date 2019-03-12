@@ -2,8 +2,6 @@
 
 public class CoinInteract : MonoBehaviour
 {
-   
-
     private void OnTriggerEnter2D(Collider2D TriggerObject)
     {
         if (TriggerObject.gameObject.name == "Player1" || TriggerObject.gameObject.name == "Player2")

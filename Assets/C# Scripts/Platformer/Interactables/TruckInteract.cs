@@ -4,10 +4,14 @@ using UnityEngine;
 public class TruckInteract : MonoBehaviour
 {
     //Conditions to check to complete level
-    int TotalCoins = 1; //Edit this number on different levels
+    public int TotalCoins = 1; //Edit this number on different levels
     public int CoinCount = 0;
     bool P1Present = false;
     bool P2Present = false;
+
+    public GameObject LevelCompleteUI;
+    public GameObject AssembledTruck;
+
 
 
     private void OnTriggerEnter2D(Collider2D TriggerObject)
@@ -37,8 +41,6 @@ public class TruckInteract : MonoBehaviour
         }
     }
 
-
-
     void Update()
     {
 
@@ -48,7 +50,11 @@ public class TruckInteract : MonoBehaviour
             Destroy(GameObject.Find("Player1"));
             Destroy(GameObject.Find("Player2"));
             Destroy(gameObject);
-
+            AssembledTruck.SetActive(true);
+            LevelCompleteUI.SetActive(true);
+            Time.timeScale = 0f;
         }
+
+        
     }
 }

@@ -10,8 +10,12 @@ public class Player2Movement : MonoBehaviour
     float maxY = 5.93f;
 
     //Player 2 Speed and Jump
-    float Speed = 10f;
+    float Speed = 8f;
     float Jump = 20f;
+    bool isGrounded = false;
+
+    //Power Ups
+    public bool BombPower = false;
 
 
     // Start is called before the first frame update
@@ -46,12 +50,38 @@ public class Player2Movement : MonoBehaviour
         float x = Input.GetAxis("Horizontal2");
         rb.velocity = new Vector2(x * Speed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump2") && rb.velocity.y == 0)  //&& transform.position.y != 6.3 <- possible way to fix staying on top?
+        if (Input.GetButtonDown("Jump2") && isGrounded == true)  //&& transform.position.y != 6.3 <- possible way to fix staying on top?
         {
             rb.velocity = Vector2.up * Jump;
         }
 
         Outofbounds();
+
+    }
+
+    private void OnCollisionStay2D(Collision2D collisionInfo)
+    {
+        if (collisionInfo.gameObject.name == "Ground" ||
+            collisionInfo.gameObject.name == "Tiles" ||
+            collisionInfo.gameObject.name == "Plank" ||
+            collisionInfo.gameObject.name == "Column" ||
+            collisionInfo.gameObject.name == "Player1")
+        {
+            isGrounded = true;
+        }
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collisionInfo)
+    {
+        if (collisionInfo.gameObject.name == "Ground" ||
+            collisionInfo.gameObject.name == "Tiles" ||
+            collisionInfo.gameObject.name == "Plank" ||
+            collisionInfo.gameObject.name == "Column" ||
+            collisionInfo.gameObject.name == "Player1")
+        {
+            isGrounded = false;
+        }
 
     }
 

@@ -502,7 +502,6 @@ MonoBehaviour:
   HighScore: {fileID: 1374015134}
   BirdEnemyDeathSprite: {fileID: 21300000, guid: 9a9871d79d525ab499dd167fd35c46ad,
     type: 3}
-  EvolvedCar: {fileID: 0}
   explosion: {fileID: 944191637}
 --- !u!58 &499834063
 CircleCollider2D:
@@ -1696,6 +1695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 124cf4bc07b217c488de0581f2c2b802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Puff: {fileID: 0}
 --- !u!60 &1802697363
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1904,7 +1904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}

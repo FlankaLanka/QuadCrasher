@@ -11,7 +11,11 @@ public class Player1Movement : MonoBehaviour
 
     //Player 1 Speed and Jump
     float Speed = 10f;
-    float Jump = 25f;
+    float Jump = 20f;
+    bool isGrounded = false;
+
+    //Power Ups
+    public bool BombPower = false;
 
     private void Outofbounds()
     {
@@ -43,12 +47,38 @@ public class Player1Movement : MonoBehaviour
 
         rb.velocity = new Vector2(x * Speed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && rb.velocity.y == 0)  //&& transform.position.y != 6.3 <- possible way to fix staying on top?
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             rb.velocity = Vector2.up * Jump;
         }
 
         Outofbounds();
+
+    }
+
+    private void OnCollisionStay2D(Collision2D collisionInfo)
+    {
+        if (collisionInfo.gameObject.name == "Ground" ||
+            collisionInfo.gameObject.name == "Tiles" ||
+            collisionInfo.gameObject.name == "Plank" ||
+            collisionInfo.gameObject.name == "Column" ||
+            collisionInfo.gameObject.name == "Player2")
+        {
+            isGrounded = true;
+        }
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collisionInfo)
+    {
+        if (collisionInfo.gameObject.name == "Ground" ||
+            collisionInfo.gameObject.name == "Tiles" ||
+            collisionInfo.gameObject.name == "Plank" ||
+            collisionInfo.gameObject.name == "Column" ||
+            collisionInfo.gameObject.name == "Player2")
+        {
+            isGrounded = false;
+        }
 
     }
 
