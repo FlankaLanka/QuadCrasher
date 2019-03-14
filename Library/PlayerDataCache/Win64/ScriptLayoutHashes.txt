@@ -145,6 +145,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 de513c8a526159fc376a1cbbbecfd472 Assembly-CSharp.dll:.BombInteract
 8b8963a81806c472aa7ffc872e8069c7 Assembly-CSharp.dll:.PlayerCollision
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SpringInteract
 25f0dd9f5b70c365c4c23392697c8f5c Assembly-CSharp.dll:.Player2Movement
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
@@ -192,4 +193,3 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.LevelSelectButtons
 a18eb80dc53ba4734798aa46b5b16d04 Assembly-CSharp.dll:.HappyBirdMovement
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SpringInteract
