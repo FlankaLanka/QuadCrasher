@@ -13,9 +13,11 @@ public class Player2Movement : MonoBehaviour
     float Speed = 8f;
     float Jump = 20f;
     bool isGrounded = false;
+    float SpringJumpBoost = 1.33f;
 
     //Power Ups
     public bool BombPower = false;
+    public bool SpringPower = false;
 
 
     // Start is called before the first frame update
@@ -57,6 +59,8 @@ public class Player2Movement : MonoBehaviour
 
         Outofbounds();
 
+        SpringPowerCheck();
+
     }
 
     private void OnCollisionStay2D(Collision2D collisionInfo)
@@ -83,6 +87,15 @@ public class Player2Movement : MonoBehaviour
             isGrounded = false;
         }
 
+    }
+
+    private void SpringPowerCheck()
+    {
+        if (SpringPower)
+        {
+            Jump = Jump * SpringJumpBoost;
+            SpringPower = false;
+        }
     }
 
 }

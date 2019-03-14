@@ -13,9 +13,11 @@ public class Player1Movement : MonoBehaviour
     float Speed = 10f;
     float Jump = 20f;
     bool isGrounded = false;
+    float SpringJumpBoost = 1.33f;
 
     //Power Ups
     public bool BombPower = false;
+    public bool SpringPower = false;
 
     private void Outofbounds()
     {
@@ -53,6 +55,9 @@ public class Player1Movement : MonoBehaviour
         }
 
         Outofbounds();
+        SpringPowerCheck();
+
+
 
     }
 
@@ -80,6 +85,15 @@ public class Player1Movement : MonoBehaviour
             isGrounded = false;
         }
 
+    }
+
+    private void SpringPowerCheck()
+    {
+        if (SpringPower)
+        {
+            Jump = Jump * SpringJumpBoost;
+            SpringPower = false;
+        }
     }
 
 }
